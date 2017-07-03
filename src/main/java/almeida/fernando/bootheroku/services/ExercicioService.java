@@ -32,7 +32,12 @@ public class ExercicioService {
 
 	@Transactional
 	public Exercicio insert(Exercicio exercicio) {
-		return exercicioRepository.insert(exercicio);
+		
+		if(org.springframework.util.StringUtils.isEmpty(exercicio.getId())){
+			return exercicioRepository.insert(exercicio);
+		}
+
+		return exercicioRepository.save(exercicio);
 	}
 
 }
