@@ -15,7 +15,6 @@ public class ExercicioService {
 	@Autowired
 	private ExercicioRepository exercicioRepository;
 
-	@Transactional
 	public List<Exercicio> findAll() {
 		return exercicioRepository.findAll();
 	}
