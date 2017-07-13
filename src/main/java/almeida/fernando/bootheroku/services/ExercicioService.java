@@ -10,6 +10,7 @@ import almeida.fernando.bootheroku.model.Exercicio;
 import almeida.fernando.bootheroku.repository.ExercicioRepository;
 
 @Service
+@Transactional
 public class ExercicioService {
 
 	@Autowired
@@ -19,17 +20,14 @@ public class ExercicioService {
 		return exercicioRepository.findAll();
 	}
 
-	@Transactional
 	public Exercicio findOne(String id) {
 		return exercicioRepository.findOne(id);
 	}
 
-	@Transactional
 	public void delete(String id) {
 		exercicioRepository.delete(id);
 	}
 
-	@Transactional
 	public Exercicio insert(Exercicio exercicio) {
 		
 		if(org.springframework.util.StringUtils.isEmpty(exercicio.getId())){
