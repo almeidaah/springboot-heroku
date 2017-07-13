@@ -25,8 +25,6 @@ public class ExercicioServiceTest {
 	@Before
 	public void 
 	beforeTests(){
-		//exercicioService = Mockito.mock(ExercicioService.class);
-		
 		System.out.println("Before Testing");
 	}
 	 
