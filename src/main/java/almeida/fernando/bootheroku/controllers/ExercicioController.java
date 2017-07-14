@@ -39,7 +39,7 @@ public class ExercicioController {
 	@DeleteMapping("/{id}")
 	@ResponseBody
 	public ResponseEntity<Exercicio> delete(@PathVariable String id){
-		exercicioService.delete(id);
+		//exercicioService.delete(id);
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
 	
