@@ -24,11 +24,6 @@ public class ExercicioController {
 	@Autowired
 	private ExercicioService exercicioService;
 	
-	@GetMapping
-	@ResponseBody
-	public List<Exercicio> findAll(){
-		return exercicioService.findAll();
-	}
 	
 	@GetMapping("/{id}")
 	@ResponseBody
