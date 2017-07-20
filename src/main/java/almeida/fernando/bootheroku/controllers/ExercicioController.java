@@ -24,16 +24,16 @@ public class ExercicioController {
 	@Autowired
 	private ExercicioService exercicioService;
 	
-	@GetMapping
-	@ResponseBody
-	public List<Exercicio> findAll(){
-		return exercicioService.findAll();
-	}
-	
 	@GetMapping("/{id}")
 	@ResponseBody
 	public Exercicio findOne(@PathVariable String id){
 		return exercicioService.findOne(id);
+	}
+	
+	@GetMapping
+	@ResponseBody
+	public List<Exercicio> findAll(){
+		return exercicioService.findAll();
 	}
 	
 	@DeleteMapping("/{id}")
