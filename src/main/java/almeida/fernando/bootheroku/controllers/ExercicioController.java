@@ -24,10 +24,6 @@ public class ExercicioController {
 	@Autowired
 	private ExercicioService exercicioService;
 	
-<<<<<<< HEAD
-=======
-	
->>>>>>> 74af418b1f65a447ef28df4c65b5eec0c17d7d11
 	@GetMapping("/{id}")
 	@ResponseBody
 	public Exercicio findOne(@PathVariable String id){
